@@ -1,0 +1,27 @@
+<h1>Edit an employee</h1>
+
+<div class="form">
+  <%= form_tag(employee_path(@employee["id"]), :method => :patch) do %>
+    <fieldset>
+      <%= label_tag :first_name %>
+      <%= text_field_tag :first_name, @employee["first_name"] %><br/>
+
+      <%= label_tag :middle_name %>
+      <%= text_field_tag :middle_name, @employee["middle_name"] %><br/>
+
+      <%= label_tag :last_name %>
+      <%= text_field_tag :last_name, @employee["last_name"] %><br/>
+
+      <%= label_tag :suffix %>
+      <%= text_field_tag :suffix, @employee["suffix"] %><br/>
+
+      <%= label_tag :email %>
+      <%= text_field_tag :email, @employee["email"] %><br/>
+
+      <%= label_tag :phone %>
+      <%= text_field_tag :phone, @employee["phone"] %><br/>
+
+      <%= submit_tag "Update employee" %>
+    </fieldset>
+  <% end %>
+</div>
